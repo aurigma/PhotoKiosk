@@ -1,0 +1,64 @@
+﻿<Page x:Class="Aurigma.PhotoKiosk.BurningScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+      xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core"
+      Title="BurningScreen"
+      Loaded="BurningScreenLoadedHandler">
+    <DockPanel LastChildFill="True">
+        <DockPanel DockPanel.Dock="Top">
+            <!-- Back button -->
+            <Button Style="{StaticResource BackButtonStyle}"
+                Click="ButtonPrevStageClickHandler"
+                x:Name="_backButton"
+                DockPanel.Dock="Left"
+                VerticalAlignment="Center">
+                <pk:OutlinedText Style="{StaticResource BackButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.BackButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+            </Button>
+
+            <!-- Title -->
+            <pk:OutlinedText Style="{StaticResource TitleTextStyle}"
+                       TextContent="{DynamicResource {x:Static Core:Constants.BurningScreenTextKey}}"
+                       DockPanel.Dock = "Left" HorizontalAlignment="Left" />
+        </DockPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Screen message -->
+            <pk:OutlinedText Style="{StaticResource BurningScreenInstructionsTextStyle}"
+                 TextContent="{DynamicResource {x:Static Core:Constants.BurningScreenBeforeTextKey}}"
+                 x:Name="_burnInstructionsLabel"
+                 Margin="10" Grid.Column="1" Grid.Row="0" />
+
+            <!-- Burn button -->
+            <Button  Style="{StaticResource BurnButtonStyle}"
+                     Grid.Column="1" Grid.Row="1"
+                     Click="BurnButtonClick"
+                     x:Name="_burnButton"
+                     MaxWidth="300">
+                <pk:OutlinedText Style="{StaticResource ButtonBurnTextStyle}"
+                                 TextContent="{DynamicResource {x:Static Core:Constants.BurningScreenBurnButtonKey}}"
+                                 Margin ="8 0 8 0"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+            </Button>
+
+            <!-- Progress bar -->
+            <ProgressBar x:Name="_progressBar" Grid.Column="1" Grid.Row="1" Height="24" Width="500" IsIndeterminate="True" />
+        </Grid>
+    </DockPanel>
+</Page>

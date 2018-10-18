@@ -1,0 +1,715 @@
+<?xml version="1.0" standalone="yes"?>
+<resources>
+
+  <!-- Common -->
+  <textResource>
+    <key>CancelButton</key>
+    <value>Cancel order</value>
+  </textResource>
+  <textResource>
+    <key>BackButton</key>
+    <value>Back</value>
+  </textResource>
+  <textResource>
+    <key>NextButton</key>
+    <value>Next</value>
+  </textResource>
+  <textResource>
+    <key>OkMessage</key>
+    <value>OK</value>
+  </textResource>
+  <textResource>
+    <key>CancelMessage</key>
+    <value>Cancel</value>
+  </textResource>
+  <textResource>
+    <key>YesMessage</key>
+    <value>Yes</value>
+  </textResource>
+  <textResource>
+    <key>NoMessage</key>
+    <value>No</value>
+  </textResource>
+  <textResource>
+    <key>SureWantToCancelOrderMessage</key>
+    <value>Do you really want to discard your order?</value>
+  </textResource>
+  <textResource>
+    <key>BeforeResetMessage</key>
+    <value>Order creation is suspended due to user inactivity. &#xd;&#xa;Please click "Back to Order" or your order will be automatically discarded in a few seconds.</value>
+  </textResource>
+  <textResource>
+    <key>BackToOrderButton</key>
+    <value>Back to Order</value>
+  </textResource>
+
+  <!-- Welcome Screen -->
+  <textResource>
+    <key>WelcomeScreenNextButton</key>
+    <value>Start</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenOrderPhotosButton</key>
+    <value>Order photos</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenPrintPhotosButton</key>
+    <value>Print photos</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenBurnPhotosButton</key>
+    <value>Burn photos to CD/DVD</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenProcessOrderButton</key>
+    <value>Process order</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenHeader</key>
+    <value>Welcome to Photo Kiosk</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenBluetoothDisabledHint</key>
+    <value>Insert your CD, DVD, Flash drive, or another media and click "Start".</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenBluetoothEnabledHint</key>
+    <value>Click "Start" to begin.</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenBluetoothDisabledMultiActionsHint</key>
+    <value>Insert your CD, DVD, Flash drive, or another media and choose a service.</value>
+  </textResource>
+  <textResource>
+    <key>WelcomeScreenBluetoothEnabledMultiActionsHint</key>
+    <value>Choose a service.</value>
+  </textResource>
+
+  <!-- Choose Upload Way Screen -->
+  <textResource>
+    <key>ChooseUploadWayScreenHeader</key>
+    <value>Choosing How to Upload Photos</value>
+  </textResource>
+  <textResource>
+    <key>ChooseUploadWayScreenHint</key>
+    <value>Choose the appropriate way of transferring the photos for making an order and click "Next".</value>
+  </textResource>
+  <textResource>
+    <key>MediaStorageTitle</key>
+    <value>Portable storage media</value>
+  </textResource>
+  <textResource>
+    <key>MediaStorageDescription</key>
+    <value>This will transfer the photos from portable storages such as USB Flash drives, SD, MMC and CF memory cards as well as CD and DVD. Insert your media to continue to the next step.</value>
+  </textResource>
+  <textResource>
+    <key>BluetoothTitle</key>
+    <value>Bluetooth</value>
+  </textResource>
+  <textResource>
+    <key>BluetoothDescription</key>
+    <value>This will transfer the photos from mobile phone or from PDA via Bluetooth. Make sure your device supports Bluetooth data transfer and follow the instructions for the next step.</value>
+  </textResource>
+
+ <!-- Select Folders Screen -->
+  <textResource>
+    <key>SelectFoldersScreenHeader</key>
+    <value>Selecting Folders</value>
+  </textResource>
+  <textResource>
+    <key>SelectFoldersScreenHint</key>
+    <value>Select folders to upload photos from and click "Next".</value>
+  </textResource>
+  <textResource>
+    <key>SelectedFoldersLabel</key>
+    <value>Selected folders: </value>
+  </textResource>
+  <textResource>
+    <key>PhotosLabel</key>
+    <value>Photos: </value>
+  </textResource>
+  <textResource>
+    <key>RemovableDiskText</key>
+    <value>Removable Disk</value>
+  </textResource>
+  <textResource>
+    <key>CDDVDDiskText</key>
+    <value>CD/DVD Disk</value>
+  </textResource>
+  <textResource>
+    <key>FilesNotFoundMessage</key>
+    <value>No files found.</value>
+  </textResource>
+
+  <!-- Uploading Photos Screen -->
+  <textResource>
+    <key>UploadingPhotosScreenHeader</key>
+    <value>Uploading Photos</value>
+  </textResource>
+  <textResource>
+    <key>ReadyToReceivePhotosText</key>
+    <value>Ready to receive photos</value>
+  </textResource>
+  <textResource>
+    <key>ReceivedPhotosCountText</key>
+    <value>Received photos count: </value>
+  </textResource>
+  <textResource>
+    <key>HowToLoadPhotosUsingBluetoothText</key>
+    <value>Photo Kiosk is expecting the data to be transferred. Please upload photos from your portable device to the Bluetooth host named #BluetoothHostName#. The amount of photos to be transferred will be displayed to you.&#xd;&#xa;&#xd;&#xa;After all necessary photos have been uploaded, click "Next" to create the order.</value>
+  </textResource>
+
+  <!-- Finding Photos Screen -->
+  <textResource>
+    <key>FindingPhotosHeader</key>
+    <value>Searching photos...</value>
+  </textResource>
+  <textResource>
+    <key>FindingPhotosHint</key>
+    <value>Please wait.</value>
+  </textResource>
+
+  <!-- ThumbnailList Control -->
+  <textResource>
+    <key>TabAllButton</key>
+    <value>All</value>
+  </textResource>
+  <textResource>
+    <key>TabCheckedButton</key>
+    <value>Checked</value>
+  </textResource>
+  <textResource>
+    <key>TabUncheckedButton</key>
+    <value>Unchecked</value>
+  </textResource>
+  <textResource>
+    <key>Pages</key>
+    <value>Pages</value>
+  </textResource>
+  <textResource>
+    <key>PagesInfo</key>
+    <value>Photos #0#, Pages #1# </value>
+  </textResource>
+  <textResource>
+    <key>ThumbnailCheckButton</key>
+    <value>check</value>
+  </textResource>
+   <textResource>
+    <key>ThumbnailPreviewButton</key>
+    <value>preview</value>
+  </textResource>
+   <textResource>
+    <key>ThumbnailRemoveButton</key>
+    <value>don't print</value>
+  </textResource>
+   <textResource>
+    <key>ThumbnailPrintsButton</key>
+    <value>prints</value>
+  </textResource>
+   <textResource>
+    <key>ThumbnailSetFrameButton</key>
+    <value>set&#xd;&#xa;print area</value>
+  </textResource>
+   <textResource>
+    <key>ThumbnailEditButton</key>
+    <value>edit</value>
+  </textResource>
+  <textResource>
+    <key>ThumbnailLowQuality</key>
+    <value>Low quality for {0}</value>
+  </textResource>
+  <textResource>
+    <key>LoadingImageErrorMessage</key>
+    <value>Unable to open photo. It cannot be viewed or edited, but still can be ordered.</value>
+  </textResource>
+
+  <!-- Select Photos Screen -->
+  <textResource>
+    <key>SelectStepHeader</key>
+    <value>Step 1: Select photos you want to print</value>
+  </textResource>
+  <textResource>
+    <key>SelectStepCdBurningHeader</key>
+    <value>Step 1: Select photos you want to burn to CD/DVD</value>
+  </textResource>
+  <textResource>
+    <key>SelectStepHint</key>
+    <value>Click a photo to add it to the order.</value>
+  </textResource>
+  <textResource>
+    <key>SelectStepCdBurningHint</key>
+    <value>Click a photo to add it to the disc.</value>
+  </textResource>
+  <textResource>
+    <key>CheckAllButton</key>
+    <value>Check all</value>
+  </textResource>
+  <textResource>
+    <key>TotalPhotosLabel</key>
+    <value>Photos: </value>
+  </textResource>
+  <textResource>
+    <key>TotalSizeLabel</key>
+    <value>Total size: </value>
+  </textResource>
+  <textResource>
+    <key>KilobytesLabel</key>
+    <value>KB</value>
+  </textResource>
+  <textResource>
+    <key>MegabytesLabel</key>
+    <value>MB</value>
+  </textResource>
+  <textResource>
+    <key>GigabytesLabel</key>
+    <value>GB</value>
+  </textResource>
+  <textResource>
+    <key>CheckSomePhotosMessage</key>
+    <value>There are no photos selected for an order. &#xd;&#xa;Please, select at least one photo &#xd;&#xa;to proceed to the next step.</value>
+  </textResource>
+  <textResource>
+    <key>MinimumCostMessage</key>
+    <value>Your order cost ({0}) is less than minimum allowed cost ({1}).&#xd;&#xa;Please order more photos.</value>
+  </textResource>
+
+  <!-- Order Forming Screen -->
+  <textResource>
+    <key>OrderFormingHeader</key>
+    <value>Step 2: Specify order details</value>
+  </textResource>
+  <textResource>
+    <key>OrderFormingHint</key>
+    <value>Click on number of prints to choose print format and amount of copies.</value>
+  </textResource>
+  <textResource>
+    <key>AllOrderHeader</key>
+    <value>Your Order</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoFormat</key>
+    <value>Format</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoControlPrice</key>
+    <value>Price</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoCount</key>
+    <value>Quantity</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoCost</key>
+    <value>Cost</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoDiscountCost</key>
+    <value>Discount cost</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoService</key>
+    <value>Service</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoTotal</key>
+    <value>Total</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoOrderTotal</key>
+    <value>Order total</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoSalesTax</key>
+    <value>Sales tax</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoTotalPayment</key>
+    <value>Total payment</value>
+  </textResource>
+  <textResource>
+    <key>OrderInfoCdBurning</key>
+    <value>CD/DVD burning</value>
+  </textResource>
+  <textResource>
+    <key>SetFormatUpButton</key>
+    <value>Set Format</value>
+  </textResource>
+  <textResource>
+    <key>SetFormatDownButton</key>
+    <value>for all photos in the order</value>
+  </textResource>
+  <textResource>
+    <key>ChoosePaperFormatsHint</key>
+    <value>Please specify quantities for each print format.</value>
+  </textResource>
+  <textResource>
+    <key>ChoosePaperFormatsWarning</key>
+    <value>This operation may overwrite print formats previously specified for photos. Continue?</value>
+  </textResource>
+  <textResource>
+    <key>OrderParamsHeaderText</key>
+    <value>Print options</value>
+  </textResource>
+  <textResource>
+    <key>OrderParamsPaperTypeText</key>
+    <value>Paper type:</value>
+  </textResource>
+  <textResource>
+    <key>OrderParamsCropModeText</key>
+    <value>Crop mode:</value>
+  </textResource>
+  <textResource>
+    <key>ChangeOrderParamsButton</key>
+    <value>Change print options</value>
+  </textResource>
+  <textResource>
+    <key>SelectPaperTypeHint</key>
+    <value>Choose paper type</value>
+  </textResource>
+  <!-- Paper types and descriptions are stored in Priсe.xml -->
+  <textResource>
+    <key>SelectCropModeText</key>
+    <value>How to crop images?</value>
+  </textResource>
+  <textResource>
+    <key>CropToFillText</key>
+    <value>Crop to Fit into Format</value>
+  </textResource>
+  <textResource>
+    <key>CropToFillTextDescription</key>
+    <value>The photo is stretched to completely fill the paper. The parts that go beyond the paper format are cropped.</value>
+  </textResource>
+  <textResource>
+    <key>ResizeToFitText</key>
+    <value>Preserve Aspect Ratio</value>
+  </textResource>
+  <textResource>
+    <key>ResizeToFitTextDescription</key>
+    <value>The photos will be fit into the paper format. If the aspect ratio of the paper differs from that of the photo, whitespaces are left.</value>
+  </textResource>
+
+  <!-- Image Viewer/Editor -->
+  <textResource>
+    <key>ImageEditorViewHeader</key>
+    <value>View photos</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorEditHeader</key>
+    <value>View and edit photos</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorCropHeader</key>
+    <value>Set print area</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorReturnButton</key>
+    <value>Back to photos</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorPreviousButton</key>
+    <value>Previous photo</value>
+  </textResource>
+    <textResource>
+    <key>ImageEditorNextButton</key>
+    <value>Next photo</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorUndoButton</key>
+    <value>Undo</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedoButton</key>
+    <value>Redo</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRotateLeftButton</key>
+    <value>Rotate left</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRotateRightButton</key>
+    <value>Rotate right</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorFlipButton</key>
+    <value>Flip</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorCropButton</key>
+    <value>Crop</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorCropOptionButton</key>
+    <value>Crop</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorColorCorrectionButton</key>
+    <value>Color Correction</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorEffectsButton</key>
+    <value>Effects</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeButton</key>
+    <value>Red-eye removal</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorSaveButton</key>
+    <value>Save</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorSaveAsNewButton</key>
+    <value>Save as new</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorApplyButton</key>
+    <value>Apply</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorCancelButton</key>
+    <value>Cancel</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorInvertButton</key>
+    <value>Rotate crop frame</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorBrightnessText</key>
+    <value>Brightness</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorContrastText</key>
+    <value>Contrast</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorAutoLevelsButton</key>
+    <value>Auto Correction</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorBlackAndWhiteButton</key>
+    <value>Black and white</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorSepiaButton</key>
+    <value>Sepia</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeStep1</key>
+    <value>Select red-eyed face. Be as precise as possible.&#xd;&#xa;&#xd;&#xa;Click "Next" button when you selected the face.</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeStep2</key>
+    <value>Are you satisfied? &#xd;&#xa;If yes click "Apply" button to save this result. &#xd;&#xa;&#xd;&#xa;If you want to correct red-eyed face manually click "Manual" button.</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeStep3</key>
+    <value>Click red eyes. If results not ok, use "Undo" button to cancel last change. &#xd;&#xa;&#xd;&#xa;When you satisfied click the "Apply" button.</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeNextButton</key>
+    <value>Next</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeManualButton</key>
+    <value>Manual</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorRedEyeRemoveButton</key>
+    <value>Remove</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorExitConfirmMessage</key>
+    <value>Do you really want to return &#xd;&#xa;to a list of photos without saving changes?</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorEditNextPhotoMessage</key>
+    <value>Do you really want to edit next image &#xd;&#xa;without saving current changes?</value>
+  </textResource>
+  <textResource>
+    <key>ImageEditorEditPreviousPhotoMessage</key>
+    <value>Do you really want to edit previous image &#xd;&#xa;without saving current changes?</value>
+  </textResource>
+  <textResource>
+    <key>MinCropSizeMessage</key>
+    <value>Crop cannot be performed because selected area is too small.</value>
+  </textResource>
+  <textResource>
+    <key>TransformImageMessage</key>
+    <value>Please wait.</value>
+  </textResource>
+
+  <!-- Additional Services Screen -->
+  <textResource>
+    <key>AdditionalServicesHeader</key>
+    <value>Choose additional services</value>
+  </textResource>
+  <textResource>
+    <key>AdditionalServicePrice</key>
+    <value>{0}&#xd;&#xa;Price: {1}</value>
+  </textResource>
+
+  <!-- Confirm Order Screen-->
+  <textResource>
+    <key>OrderConfirmHeader</key>
+    <value>Step 3: Review your order</value>
+  </textResource>
+  <textResource>
+    <key>OrderConfirmCdBurningHeader</key>
+    <value>Step 2: Review your order</value>
+  </textResource>
+  <textResource>
+    <key>OrderConfirmHint</key>
+    <value>Review your order details. If required, return to previous steps and change your order.</value>
+  </textResource>
+  <textResource>
+    <key>OrderConfirmCdBurningHint</key>
+    <value>Review your order details. If required, return to previous step and change your order.</value>
+  </textResource>
+
+  <!-- Contact Info Screen -->
+  <textResource>
+    <key>ContactInfoHeader</key>
+    <value>Step 4: Enter your contact information</value>
+  </textResource>
+  <textResource>
+    <key>ContactInfoCdBurningHeader</key>
+    <value>Step 3: Enter your contact information</value>
+  </textResource>
+  <textResource>
+    <key>ContactInfoHint</key>
+    <value>Fill in your contact information.</value>
+  </textResource>
+  <textResource>
+    <key>YourName</key>
+    <value>Name</value>
+  </textResource>
+  <textResource>
+    <key>YourPhone</key>
+    <value>Phone</value>
+  </textResource>
+  <!-- See manual for more details regarding KeyboardLayout. -->
+  <textResource>
+    <key>KeyboardLayout</key>
+    <value>1234567890@#EndRow#QWERTYUIOP#Backspace#EndRow#ASDFGHJKL-#EndRow#ZXCVBNM,.#EndRow#EndRow#Shift:!$%#Space</value>
+  </textResource>
+  <textResource>
+    <key>KeyboardShiftedLayout</key>
+    <value><![CDATA[!@#Hash#$%&*_+=/#EndRow#QWERTYUIOP#Backspace#EndRow#ASDFGHJKL-#EndRow#ZXCVBNM,.#EndRow#EndRow#Shift:123#Space]]></value>
+  </textResource>
+  <textResource>
+    <key>EnterYourNameMessage</key>
+    <value>Please enter your name.</value>
+  </textResource>
+  <textResource>
+    <key>EnterYourPhoneMessage</key>
+    <value>Please enter your phone number.</value>
+  </textResource>
+  <textResource>
+    <key>EnterYourEmailMessage</key>
+    <value>Please enter valid e-mail address.</value>
+  </textResource>
+  <textResource>
+    <key>ProgressOrderMessage</key>
+    <value>Please wait while your order is processed.</value>
+  </textResource>
+  <textResource>
+    <key>PreparingImageMessage</key>
+    <value>Preparing files to burn to CD/DVD.</value>
+  </textResource>
+
+  <!-- Order Id Screen -->
+  <textResource>
+    <key>OrderIdHeader</key>
+    <value>Step 5: Enter your order ID</value>
+  </textResource>
+  <textResource>
+    <key>OrderIdCdBurningHeader</key>
+    <value>Step 4: Enter your order ID</value>
+  </textResource>
+  <textResource>
+    <key>OrderIdProcessOrderHeader</key>
+    <value>Enter your order ID and payment confirmation code</value>
+  </textResource>
+  <textResource>
+    <key>OrderIdHint</key>
+    <value>Fill in your order identifier.</value>
+  </textResource>
+  <textResource>
+    <key>OrderIdProcessOrderHint</key>
+    <value>Fill in your order identifier and payment confirmation code.</value>
+  </textResource>
+  <textResource>
+    <key>YourOrderId</key>
+    <value>Order ID</value>
+  </textResource>
+  <textResource>
+    <key>YourActivationCode</key>
+    <value>Payment confirmation code</value>
+  </textResource>
+  <textResource>
+    <key>EnterYourOrderIdMessage</key>
+    <value>Please enter your order identifier.</value>
+  </textResource>
+  <textResource>
+    <key>EnterYourActivationCodeMessage</key>
+    <value>Please enter your payment confirmation code.</value>
+  </textResource>
+  <textResource>
+    <key>ActivationCodeIsIncorrectMessage</key>
+    <value>Order identifier or payment confirmation code is incorrect.</value>
+  </textResource>
+
+  <!-- Burning Screen -->
+  <textResource>
+    <key>BurningScreenHeader</key>
+    <value>Burning photos to CD/DVD</value>
+  </textResource>
+  <textResource>
+    <key>BurningScreenBurnButton</key>
+    <value>Burn</value>
+  </textResource>
+  <textResource>
+    <key>BurningScreenText</key>
+    <value>Insert your CD/DVD and click "Burn".</value>
+  </textResource>
+  <textResource>
+    <key>BurningScreenInProcessText</key>
+    <value>Please wait while photos are burned to the disc. Do not eject the media!</value>
+  </textResource>
+  <textResource>
+    <key>BurningScreenTryAgainText</key>
+    <value>Try again</value>
+  </textResource>
+  <textResource>
+    <key>BurningScreenCancelText</key>
+    <value>Cancel order</value>
+  </textResource>
+
+  <!-- Printing Screeen -->
+  <textResource>
+    <key>PrintingScreenHeader</key>
+    <value>Printing Photos...</value>
+  </textResource>
+  <textResource>
+    <key>PrintingScreenHint</key>
+    <value>Please wait while your photos are being printed.</value>
+  </textResource>
+
+  <!-- ThankYou Screen -->
+  <textResource>
+    <key>ThankYouScreenHeader</key>
+    <value>Thank you for your choice</value>
+  </textResource>
+  <textResource>
+    <key>ThankYouScreenHint</key>
+    <value>Do not forget to take your storage media off!</value>
+  </textResource>
+  <textResource>
+    <key>ThankYouScreenOrderId</key>
+    <value>Your order ID is #0#</value>
+  </textResource>
+  <textResource>
+    <key>ThanksButton</key>
+    <value>Quit</value>
+  </textResource>
+</resources>

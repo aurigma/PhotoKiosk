@@ -1,0 +1,165 @@
+﻿<Page x:Class="Aurigma.PhotoKiosk.BluetoothLoadScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+      xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core"
+      Title="UploadingPhotosScreen"
+      Loaded="LoadedEventHandler"
+      Unloaded="UnloadedEventHandler">
+
+    <DockPanel LastChildFill="True">
+
+        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+
+			<!-- Back button -->
+			<Button Style="{StaticResource BackButtonStyle}"
+                Click="ButtonPrevStageClickHandler"
+                DockPanel.Dock="Left"
+                VerticalAlignment="Center">
+				<pk:OutlinedText Style="{StaticResource BackButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.BackButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+			</Button>
+
+			<!-- Next button -->
+			<Button Style="{StaticResource NextButtonStyle}"
+					DockPanel.Dock="Right"
+					x:Name="_nextButton"
+					Click="ButtonNextClickHandler"
+					VerticalAlignment="Center">
+				<pk:OutlinedText Style="{StaticResource NextButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.NextButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+			</Button>
+
+            <!-- Title -->
+            <pk:OutlinedText Style="{StaticResource TitleTextStyle}"
+                         TextContent="{DynamicResource {x:Static Core:Constants.LoadPhotosTextKey}}"
+                         DockPanel.Dock = "Left"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center" />
+        </DockPanel>
+
+        <StackPanel>
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 100, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Image VerticalAlignment="Center" Stretch="None" Grid.Column="0" Grid.RowSpan="2" Source="{DynamicResource {x:Static Core:Constants.ImageBluetoothLogoKey}}" />
+
+                <TextBlock x:Name="_filesCountTextBlock"
+                           Grid.Column="1" Grid.Row="0"
+                           Margin="10, 0, 8, 0"
+                           VerticalAlignment="Bottom"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource LoadPhotosTextStyle}"
+                           Text="{DynamicResource {x:Static Core:Constants.ReadyToReceivePhotosTextKey}}" />
+
+                <Canvas Grid.Column="1" Grid.Row="1"  Margin="10, 8, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Ellipse Canvas.Left="0" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource ActiveEllipseColor}" x:Name="ellipseBrush1" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="50" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush2" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="100" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush3" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="150" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush4" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="200" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush5" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="250" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush6" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="300" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush7" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <Ellipse Canvas.Left="350" Canvas.Top="0" Width="24" Height="24">
+                        <Ellipse.Fill>
+                            <SolidColorBrush Color="{StaticResource InactiveEllipseColor}" x:Name="ellipseBrush8" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Canvas>
+            </Grid>
+
+            <Grid Margin="9, 30, 9, 22">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Column="1" Style="{StaticResource MultilineHintRectangleStyle}" />
+                <TextBlock Grid.Column="1" Style="{StaticResource MultilineHintTextStyle}"
+                           x:Name="_bluetoothDescription"
+                           Margin="10"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Center" />
+            </Grid>
+        </StackPanel>
+    </DockPanel>
+
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Page.Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush1"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource InactiveEllipseColor}" Duration="0:0:0.25" BeginTime="0:0:0" AutoReverse="False" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush2"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:0.25" AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush3"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:0.5" AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush4"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:0.75" AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush5"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:1"  AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush6"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:1.25"  AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush7"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:1.5"  AutoReverse="True" />
+
+                    <ColorAnimation Storyboard.TargetName="ellipseBrush8"
+                                     Storyboard.TargetProperty="Color"
+                                     To="{StaticResource ActiveEllipseColor}" Duration="0:0:0.25"  BeginTime="0:0:1.75"  AutoReverse="False" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
+</Page>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="Aurigma.PhotoKiosk.MessageDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+        xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core"
+        Title="MessageDialog"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Style="{StaticResource MessageWindowStyle}"
+>
+  <Grid Margin="20">
+      <Grid.RowDefinitions>
+         <RowDefinition />
+         <RowDefinition />
+      </Grid.RowDefinitions>
+
+      <!-- Message text -->
+      <TextBlock TextAlignment="Center" MaxWidth="1240" TextWrapping="Wrap" Style="{StaticResource MessageDialogTextStyle}" Grid.Row="0" x:Name="_messageBlock" Margin="10" HorizontalAlignment="Center" />
+
+      <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="10">
+        <!-- Ok Button -->
+        <Button Style="{StaticResource MessageBoxOKButtonStyle}"
+                Click="ButtonOkClickHandler"
+                x:Name="_okButton"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="5">
+            <TextBlock Style="{StaticResource MessageBoxOKButtonTextStyle}"
+                       Margin="5 0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+        </Button>
+
+        <!-- Cancel Button -->
+        <Button Style="{StaticResource MessageBoxCancelButtonStyle}"
+                Click="ButtonCancelClickHandler"
+                x:Name="_cancelButton"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="5">
+            <TextBlock Style="{StaticResource MessageBoxCancelButtonTextStyle}"
+                       Margin="5 0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+        </Button>
+      </StackPanel>
+   </Grid>
+</Window>

@@ -1,0 +1,6 @@
+<UserControl x:Class="Aurigma.PhotoKiosk.ScreenKeyboardControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="Keyboard_Loaded">
+
+  <Frame x:Name="KeyboardControlFrame" NavigationUIVisibility="Hidden" />
+</UserControl>

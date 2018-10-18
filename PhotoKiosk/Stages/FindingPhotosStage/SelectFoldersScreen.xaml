@@ -1,0 +1,64 @@
+﻿<Page x:Class="Aurigma.PhotoKiosk.SelectFoldersScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+      xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core"
+      Title="SelectFoldersScreen"
+      Loaded="PageLoadedHandler">
+    <DockPanel LastChildFill="True">
+
+        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+
+            <!-- Back button -->
+            <Button Style="{StaticResource BackButtonStyle}"
+                x:Name="_prevButton"
+                Click="ButtonPrevStageClickHandler"
+                DockPanel.Dock="Left"
+                VerticalAlignment="Center">
+                <pk:OutlinedText Style="{StaticResource BackButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.BackButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+            </Button>
+
+            <!-- Next button -->
+            <Button Style="{StaticResource NextButtonStyle}"
+                x:Name="_nextButton"
+                DockPanel.Dock="Right"
+                Click="ButtonNextClickHandler"
+                VerticalAlignment="Center">
+                <pk:OutlinedText Style="{StaticResource NextButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.NextButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+            </Button>
+
+            <!-- Title -->
+            <pk:OutlinedText Style="{StaticResource TitleTextStyle}"
+                         TextContent="{DynamicResource {x:Static Core:Constants.SelectFoldersTextKey}}"
+                         DockPanel.Dock = "Left"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center" />
+        </DockPanel>
+
+        <!-- Hint -->
+        <Grid DockPanel.Dock="Top" Margin="0 7 0 15" Width="Auto">
+            <Rectangle Style="{StaticResource HintContainerStyle}" />
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Style="{StaticResource HintRectangleStyle}" Height="32" Width="9" VerticalAlignment="Center" />
+                <pk:OutlinedText Style="{StaticResource HintTextStyle}" TextContent="{DynamicResource {x:Static Core:Constants.SelectFoldersNoticeTextKey}}" Margin="10 0 0 0" VerticalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Selected folders label-->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="{DynamicResource {x:Static Core:Constants.SelectedFoldersLabelTextKey}}" Style="{StaticResource FoldersLabelStyle}" />
+            <TextBlock x:Name="_foldersCount" Style="{StaticResource FoldersLabelStyle}" />
+        </StackPanel>
+
+        <!-- Folders tree -->
+        <Border DockPanel.Dock="Bottom" Margin="0 15 0 15" Style="{StaticResource FolderTreeStyle}">
+            <TreeView x:Name="_folderTree" Foreground="Transparent" BorderThickness="0" Padding="0 30 0 30" Focusable="False" />
+        </Border>
+    </DockPanel>
+</Page>

@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AC8B349-476C-46AC-B66D-2FD7474DBD4E}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>Aurigma.PhotoKiosk</RootNamespace>
+    <AssemblyName>PhotoKiosk</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationExtension>.application</ApplicationExtension>
+    <ApplicationIcon>PhotoKiosk.ico</ApplicationIcon>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EnglishLocalization</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PhotoKiosk.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;EnglishLocalization</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PhotoKiosk.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aurigma.GraphicsMill">
+      <HintPath>..\3rdPartyComponents\GraphicsMill\x64\Aurigma.GraphicsMill.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="BaseTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\ThumbnailControl\ChangeOrderParams.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\ThumbnailControl\ChoosePaperSizes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\ThumbnailControl\OrderInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\ThumbnailControl\OrderParamsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\FindingPhotosStage\ProgressScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ImageEditorStage\ImageEditorScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ImageEditorStage\PhotoFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\MessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\BurningScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\ConfirmOrderScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\FocusableTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\OrderIdScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\PrintingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\ScreenKeyboardControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\ThankYouCancelScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\ThankYouScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProgressDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\SelectStage\AdditionalServicesScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stages\SelectStage\OrderFormingScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\SelectStage\SelectScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\ProcessOrderStage\ContactInfoScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\SelectStage\ThumbnailListControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\FindingPhotosStage\BluetoothLoadScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\FindingPhotosStage\FolderItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\FindingPhotosStage\SelectDeviceScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\FindingPhotosStage\SelectFoldersScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stages\WelcomeStage\WelcomeScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Transforms.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\AddonManager.cs" />
+    <Compile Include="Core\DataContext.cs" />
+    <Compile Include="Core\EngineCommands.cs" />
+    <Compile Include="Core\ExecutionEngine.cs" />
+    <Compile Include="Core\Log.cs" />
+    <Compile Include="Core\Order.cs" />
+    <Compile Include="Core\OrderItem.cs" />
+    <Compile Include="Core\OrderStore.cs" />
+    <Compile Include="Core\PhotoItem.cs" />
+    <Compile Include="Core\PhotoItemCache.cs" />
+    <Compile Include="Core\ThumbnailControl\ChangeOrderParams.xaml.cs">
+      <DependentUpon>ChangeOrderParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ThumbnailControl\ChoosePaperSizes.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ChoosePaperSizes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ThumbnailControl\LoadImageExifQueueItem.cs" />
+    <Compile Include="Core\ThumbnailControl\LoadImageQueueItem.cs" />
+    <Compile Include="Core\ThumbnailControl\OrderInfoControl.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>OrderInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ThumbnailControl\OrderParamsControl.xaml.cs">
+      <DependentUpon>OrderParamsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ThumbnailControl\QueueItemPack.cs" />
+    <Compile Include="Core\ThumbnailControl\AsyncThumbnailsLoader.cs" />
+    <Compile Include="Core\ThumbnailControl\QueueProcessingThread.cs" />
+    <Compile Include="Core\NativeMethods.cs" />
+    <Compile Include="Core\OutlinedTextControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\ResourcesTools.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\FindingPhotosStage\FindingPhotosStage.cs" />
+    <Compile Include="Stages\FindingPhotosStage\ProgressScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ProgressScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ImageEditorStage\CropButton.cs" />
+    <Compile Include="Stages\ImageEditorStage\ImageEditorScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ImageEditorScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ThumbnailControl\ThumbnailItem.cs" />
+    <Compile Include="Core\ThumbnailControl\ThumbnailList.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Stages\ImageEditorStage\ImageEditorStage.cs" />
+    <Compile Include="Stages\ImageEditorStage\PhotoFrame.xaml.cs">
+      <DependentUpon>PhotoFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ImageEditorStage\PointAdorner.cs" />
+    <Compile Include="Stages\ImageEditorStage\RectangleAdorner.cs" />
+    <Compile Include="Stages\MessageDialog.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\BurningScreen.xaml.cs">
+      <DependentUpon>BurningScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\ConfirmOrderScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ConfirmOrderScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\EmailValidator.cs" />
+    <Compile Include="Stages\ProcessOrderStage\FocusableTextBlock.xaml.cs">
+      <DependentUpon>FocusableTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\OrderIdScreen.xaml.cs">
+      <DependentUpon>OrderIdScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\PrintingScreen.xaml.cs">
+      <DependentUpon>PrintingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\ProcessOrderStage.cs" />
+    <Compile Include="Stages\ProcessOrderStage\ScreenKeyboardControl.xaml.cs">
+      <DependentUpon>ScreenKeyboardControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\ThankYouCancelScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ThankYouCancelScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProcessOrderStage\ThankYouScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ThankYouScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\SelectStage\AdditionalServicesScreen.xaml.cs">
+      <DependentUpon>AdditionalServicesScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\SelectStage\OrderFormingScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>OrderFormingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\SelectStage\SelectStage.cs" />
+    <Compile Include="Stages\SelectStage\SelectScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\SelectStage\ThumbnailListControl.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ThumbnailListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\StageBase.cs" />
+    <Compile Include="Stages\ProcessOrderStage\ContactInfoScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ContactInfoScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\FindingPhotosStage\BluetoothLoadScreen.xaml.cs">
+      <DependentUpon>BluetoothLoadScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\FindingPhotosStage\FolderItemControl.xaml.cs">
+      <DependentUpon>FolderItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\FindingPhotosStage\SelectDeviceScreen.xaml.cs">
+      <DependentUpon>SelectDeviceScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\FindingPhotosStage\SelectFoldersScreen.xaml.cs">
+      <DependentUpon>SelectFoldersScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stages\WelcomeStage\WelcomeStage.cs" />
+    <Compile Include="Stages\WelcomeStage\WelcomeScreen.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>WelcomeScreen.xaml</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PhotoKiosk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{3A0C32AA-4252-4E00-949B-46377FDA618F}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AllFormatsCheckBox.png" />
+    <Resource Include="Images\arrovs_h.png" />
+    <Resource Include="Images\arrovs_v.png" />
+    <Resource Include="Images\arrow-180.png" />
+    <Resource Include="Images\arrow.png" />
+    <Resource Include="Images\AutoLevels.png" />
+    <Resource Include="Images\Banner1.png" />
+    <Resource Include="Images\Banner2.png" />
+    <Resource Include="Images\BigCheckBox.png" />
+    <Resource Include="Images\black-white.png" />
+    <Resource Include="Images\Bluetooth.png" />
+    <Resource Include="Images\bluetoothlogo.png" />
+    <Resource Include="Images\CaptCenter.png" />
+    <Resource Include="Images\CaptLeft.png" />
+    <Resource Include="Images\CaptRight.png" />
+    <Resource Include="Images\ColorCorrection.png" />
+    <Resource Include="Images\cross.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\effects.png" />
+    <Resource Include="Images\GreenCheckBox.png" />
+    <Resource Include="Images\GreenCrop.png" />
+    <Resource Include="Images\left.png" />
+    <Resource Include="Images\Magnifier.png" />
+    <Resource Include="Images\next.png" />
+    <Resource Include="Images\PleaseWait.png" />
+    <Resource Include="Images\RedCrop.png" />
+    <Resource Include="Images\redEye-hand.png" />
+    <Resource Include="Images\redEye-remove.png" />
+    <Resource Include="Images\redEye.png" />
+    <Resource Include="Images\redo.png" />
+    <Resource Include="Images\RemoveButton.png" />
+    <Resource Include="Images\Remove_big.png" />
+    <Resource Include="Images\right.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\saveasnew.png" />
+    <Resource Include="Images\scissors-blue.png" />
+    <Resource Include="Images\sepia.png" />
+    <Resource Include="Images\shadow_center.png" />
+    <Resource Include="Images\shadow_left.png" />
+    <Resource Include="Images\shadow_right.png" />
+    <Resource Include="Images\Storage.png" />
+    <Resource Include="Images\ThumbnailCheckBox.png" />
+    <Resource Include="Images\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\check.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="MsBuildAL1073WarningWorkaround" BeforeTargets="BeforeBuild">
+    <PropertyGroup Condition="'$(Platform)' == 'x64'">
+      <TargetFrameworkSDKToolsDirectory>$(TargetFrameworkSDKToolsDirectory)$(Platform)\</TargetFrameworkSDKToolsDirectory>
+    </PropertyGroup>
+  </Target>
+</Project>

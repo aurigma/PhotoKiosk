@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<order id="" dateCreated="">
+	<comment></comment>
+
+	<shipTo>
+		<name></name>
+		<address></address>
+		<city></city>
+		<region></region>
+		<country></country>
+		<postalCode></postalCode>
+	</shipTo>
+	<billTo>
+		<name></name>
+		<address></address>
+		<city></city>
+		<region></region>
+		<country></country>
+		<postalCode></postalCode>
+	</billTo>
+
+	<sipping>
+		<title></title>
+		<price></price>
+	</sipping>
+	<payment>
+		<title></title>
+		<status></status>
+	</payment>
+
+	<items>
+		<item>
+			<title></title>
+			<quantity></quantity>
+			<price></price>
+			<files>
+				<file path="" />
+			</files>
+			<properties>
+				<key>value</key>
+				<key>value</key>
+				<key>value</key>
+			</properties>
+		</item>
+	</items>
+
+	<discounts>
+		<discount>
+			<title></title>
+			<amount></amount>
+		</discount>
+	</discounts>
+
+	<history>
+		<record>
+			<date></date>
+			<status></status>
+			<name></name>
+		</record>
+	</history>
+</order>

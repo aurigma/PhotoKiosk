@@ -1,0 +1,1651 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pk="http://aurigma.com/PhotoKiosk/wpf"
+					xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core">
+
+    <!-- Main window styles -->
+    <!-- Main window -->
+    <Style x:Key="WindowStyle" TargetType="Window">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#ffffff" Offset="0" />
+                        <GradientStop Color="#c8c8c8" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Main window top panel -->
+    <Style x:Key="TopPanelStyle" TargetType="Rectangle">
+        <Setter Property="Stroke" Value="#949494" />
+        <Setter Property="RadiusX" Value="6" />
+        <Setter Property="RadiusY" Value="6" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Fill">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#fefefe" Offset="0" />
+                        <GradientStop Color="#d1d1d1" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+		<Setter Property="BitmapEffect">
+			<Setter.Value>
+				<DropShadowBitmapEffect Color="Black" Direction="270" Opacity="0.6" ShadowDepth="1" />
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <!-- Main window bottom panel -->
+    <Style x:Key="BottomPanelStyle" TargetType="Rectangle">
+        <Setter Property="Stroke" Value="#3f3f3f" />
+        <Setter Property="RadiusX" Value="6" />
+        <Setter Property="RadiusY" Value="6" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Fill" Value="#6f6f6f" />
+	</Style>
+
+    <!-- Style of the rectangle which covers the window when messagebox pops up -->
+    <Style x:Key="ScreenDarkenStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="Gray" />
+        <Setter Property="Opacity" Value="0.6" />
+    </Style>
+
+	
+	<!-- Buttons -->
+	<!-- Base blue button -->
+	<Style x:Key="BaseButton1Style" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="5" RadiusY="5" Stroke="#398a3b" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#97e497" Offset="0" />
+										<GradientStop Color="#71d871" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle> 
+						<ContentPresenter/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#398a3b" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#71d871" Offset="0" />
+												<GradientStop Color="#97e497" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+			<Trigger Property="Button.IsEnabled" Value="false">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#398a3b" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#b0e3b0" Offset="0" />
+												<GradientStop Color="#92d892" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter Opacity="0.24"/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	
+	<!-- Base gray button -->
+	<Style x:Key="BaseButton2Style" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#dcdcdc" Offset="0" />
+												<GradientStop Color="#ffffff" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+			<Trigger Property="Button.IsEnabled" Value="false">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#ffffff" Offset="0" />
+												<GradientStop Color="#dcdcdc" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter Opacity="0.24"/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- Button text base style -->
+	<Style x:Key="ButtonTextStyle" TargetType="{x:Type pk:OutlinedText}">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="32" />
+		<Setter Property="Fill" Value="#000000" />
+		<Setter Property="Stroke" Value="Transparent" />
+		<Setter Property="Offset" Value="-2" />
+	</Style>
+
+	
+	<!-- Start button -->
+	<Style x:Key="StartButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+		<Setter Property="Width" Value="Auto" />
+		<Setter Property="Height" Value="70" />
+	</Style>
+
+	<!-- Text on the start button -->
+	<Style x:Key="ButtonStartTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="38" />
+	</Style>
+
+	
+	<!-- Cancel order button -->
+	<Style x:Key="CancelOrderButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton2Style}">
+		<Setter Property="Width" Value="246" />
+		<Setter Property="Height" Value="44" />
+	</Style>
+
+    <!-- Text on the cancel button -->
+    <Style x:Key="ButtonCancelTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+	
+	
+	<!-- Next button -->
+	<Style x:Key="NextButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+		<Setter Property="Height" Value="46" />
+		<Setter Property="Width" Value="190" />
+	</Style>
+
+	<!-- Text on the next button -->
+	<Style x:Key="NextButtonTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="24" />
+	</Style>
+	
+	
+	<!-- Back button -->
+	<Style x:Key="BackButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton2Style}">
+		<Setter Property="Width" Value="140" />
+		<Setter Property="Height" Value="42" />
+	</Style>
+
+	<!-- Text on the back button -->
+	<Style x:Key="BackButtonTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="22" />
+	</Style>
+	
+	
+	<!-- Back to photos button -->
+	<Style x:Key="BackToPhotosButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+		<Setter Property="Height" Value="46" />
+	</Style>
+
+	<!-- Text on the back to photos button -->
+	<Style x:Key="BackToPhotosButtonTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="24" />
+	</Style>
+
+	
+	<!-- Tab buttons -->
+	<Style x:Key="TabStyle" TargetType="RadioButton">
+		<Setter Property="OverridesDefaultStyle" Value="True" />
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="25" />
+		<Setter Property="Foreground" Value="#333333" />
+		<Setter Property="Width" Value="200"/>
+		<Setter Property="Height" Value="59"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="RadioButton">
+					<Grid>
+						<Rectangle RadiusX="6" RadiusY="6" Stroke="#969696" StrokeThickness="1">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#9c9c9c" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="RadioButton.IsChecked" Value="true">
+				<Setter Property="Foreground" Value="#000000" />
+				<Setter Property="FontWeight" Value="Bold" />
+				<Setter Property="FontSize" Value="27" />
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="RadioButton">
+							<Grid>
+								<Rectangle RadiusX="6" RadiusY="6" Stroke="#5cad6d" StrokeThickness="1">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#b9f2c3" Offset="0" />
+												<GradientStop Color="#67d36a" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	
+	<!-- Total Size panel text -->
+    <Style x:Key="TotalSizeTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+	<!-- Scroll button -->
+	<Style x:Key="ScrollButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+		<Style.Triggers>
+			<Trigger Property="Button.IsEnabled" Value="false">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#969696" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#ffffff" Offset="0" />
+												<GradientStop Color="#dcdcdc" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	
+	<!-- Arrows -->
+	<Style x:Key="ArrowStyle" TargetType="Polyline">
+		<Setter Property="Stroke" Value="#91959b" />
+		<Setter Property="Fill" Value="#e9e9e9" />
+	</Style>
+
+	
+	<!-- Check All button -->
+	<Style x:Key="CheckAllButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}" />
+
+	<!-- Text on the Check all button -->
+    <Style x:Key="CheckAllButtonTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+        <Setter Property="FontSize" Value="28" />
+    </Style>
+
+
+	<!-- Page number button -->
+	<Style x:Key="PageButtonStyle" TargetType="Rectangle">
+		<Setter Property="RadiusX" Value="5" />
+		<Setter Property="RadiusY" Value="5" />
+		<Setter Property="Stroke" Value="#bbbbbb" />
+		<Setter Property="StrokeThickness" Value="1.2" />
+		<Setter Property="Fill">
+			<Setter.Value>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Color="#ffffff" Offset="0" />
+						<GradientStop Color="#dcdcdc" Offset="1" />
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Width" Value="64" />
+		<Setter Property="Height" Value="64" />
+	</Style>
+	
+	<Style x:Key="PageButtonCheckedStyle" TargetType="Rectangle">
+		<Setter Property="RadiusX" Value="5" />
+		<Setter Property="RadiusY" Value="5" />
+		<Setter Property="Stroke" Value="#74a475" />
+		<Setter Property="StrokeThickness" Value="1.2" />
+		<Setter Property="Fill">
+			<Setter.Value>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+					<LinearGradientBrush.GradientStops>
+						<GradientStop Color="#9decac" Offset="0" />
+						<GradientStop Color="#93e8a5" Offset="1" />
+					</LinearGradientBrush.GradientStops>
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Width" Value="68" />
+		<Setter Property="Height" Value="68" />
+	</Style>
+
+	<!-- Text on the Page number button -->
+	<Style x:Key="PageNumberTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="44" />
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="Fill" Value="#ffffff" />
+		<Setter Property="Stroke" Value="#696969" />
+		<Setter Property="Offset" Value="-3" />
+	</Style>
+	
+	
+	<!-- Image commands button -->
+	<Style x:Key="ImageCommandButtonStyle" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Width" Value="60" />
+        <Setter Property="Height" Value="60" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Border BorderBrush="#bbbbbb" BorderThickness="1.2 0 1.2 0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#ffffff" Offset="0" />
+                                    <GradientStop Color="#dcdcdc" Offset="1" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Border BorderBrush="#bbbbbb" BorderThickness="1.2 0 1.2 0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#dcdcdc" Offset="0" />
+                                            <GradientStop Color="#ffffff" Offset="1" />
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<Style x:Key="ImageCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Width" Value="60" />
+        <Setter Property="Height" Value="60" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Border BorderBrush="#7e7d7d" BorderThickness="1.2 0 1.2 0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop x:Name="_checkBoxGradientColor1" Color="#ffffff" Offset="0" />
+                                    <GradientStop x:Name="_checkBoxGradientColor2" Color="#dcdcdc" Offset="1" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <Border BorderBrush="#7e7d7d" BorderThickness="1.2 0 1.2 0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#ffffff" Offset="0" />
+                                            <GradientStop Color="#d9ffd9" Offset="1" />
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+   
+
+    <Style x:Key="ImageCommandTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10" />
+    </Style>
+
+    <Style x:Key="ImprintsCountTextStyle" TargetType="pk:OutlinedText">
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Stroke" Value="#123c64" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Fill" Value="#4e92d5" />
+    </Style>
+
+    <Style x:Key="ImageButtonPanelStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#7e7d7d" />
+        <Setter Property="BorderThickness" Value="0 1 0 0" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#dadee1" Offset="0" />
+                    <GradientStop Color="#efefef" Offset="0.25" />
+                    <GradientStop Color="#efefef" Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+		
+	<!-- Set Format for all order button -->
+	<Style x:Key="SetForAllButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton2Style}" />
+
+	<!-- Text on the Set Format for all order button -->
+	<Style x:Key="SetForAllButtonUpTextStyle" TargetType="{x:Type pk:OutlinedText}">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="30" />
+		<Setter Property="Fill" Value="#4c4b4b" />
+		<Setter Property="Stroke" Value="Transparent" />
+		<Setter Property="Offset" Value="0" />
+	</Style>
+
+	<Style x:Key="SetForAllButtonDownTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource SetForAllButtonUpTextStyle}">
+		<Setter Property="FontSize" Value="22" />
+		<Setter Property="Fill" Value="#797979" />
+		<Setter Property="Offset" Value="-3" />
+	</Style>
+	
+	
+	<!-- Change print options button -->
+	<Style x:Key="ChangePrintOptionsButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton2Style}" />
+
+	<!-- Text on the Change print options button-->
+	<Style x:Key="ChangeOrderParamsButtonTextStyle" TargetType="{x:Type pk:OutlinedText}">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="Fill" Value="#4c4b4b" />
+		<Setter Property="Stroke" Value="Transparent" />
+		<Setter Property="Offset" Value="0" />
+		<Setter Property="FontSize" Value="26" />
+	</Style>
+
+	
+	<!-- MessageBox OK button -->
+	<Style x:Key="MessageBoxOKButtonStyle" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="MinWidth" Value="200"/>
+		<Setter Property="Height" Value="60"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#dcdcdc" Offset="0" />
+												<GradientStop Color="#ffffff" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- Text on the MessageBox OK button -->
+	<Style x:Key="MessageBoxOKButtonTextStyle" TargetType="TextBlock">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="32" />
+		<Setter Property="Foreground" Value="#000000" />
+	</Style>
+	
+
+	<!-- MessageBox Cancel button -->
+	<Style x:Key="MessageBoxCancelButtonStyle" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="MinWidth" Value="200"/>
+		<Setter Property="Height" Value="60"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#dcdcdc" Offset="0" />
+												<GradientStop Color="#ffffff" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- Text on the MessageBox Cancel button -->
+	<Style x:Key="MessageBoxCancelButtonTextStyle" TargetType="TextBlock">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="32" />
+		<Setter Property="Foreground" Value="#000000" />
+	</Style>
+
+	
+	<!-- Image Editor button -->
+	<Style x:Key="ImageEditorButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton2Style}" />
+
+	<!-- Text on Image Editor buttons -->
+	<Style TargetType="TextBlock" x:Key="ImageEditorButtonTextStyle">
+		<Setter Property="FontFamily" Value="Calibri"/>
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontSize" Value="18"/>
+		<Setter Property="Foreground" Value="#000000"/>
+	</Style>
+
+	<!-- Text on Image Editor Plus/Minus buttons -->
+	<Style TargetType="TextBlock" x:Key="ImageEditorPlusMinusButtonTextStyle" BasedOn="{StaticResource ImageEditorButtonTextStyle}">
+		<Setter Property="FontSize" Value="40" />
+	</Style>
+
+	<!-- Text on crop buttons -->
+	<Style x:Key="CropParamsTextStyle" TargetType="{x:Type pk:OutlinedText}">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="28" />
+		<Setter Property="Stroke" Value="Transparent" />
+		<Setter Property="Offset" Value="0" />
+		<Setter Property="Fill" Value="#444648" />
+	</Style>
+
+
+	<!-- AutoLevels checkbox -->
+	<Style x:Key="AutoLevelsCheckBoxStyle" TargetType="CheckBox">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="CheckBox">
+					<Grid>
+						<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="CheckBox.IsChecked" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="CheckBox">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#74a475" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#9decac" Offset="0" />
+												<GradientStop Color="#93e8a5" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	
+	<!-- Effects radio button -->
+	<Style x:Key="ImageEditorRadioButtonStyle" TargetType="RadioButton">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="RadioButton">
+					<Grid>
+						<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="RadioButton.IsChecked" Value="True">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="RadioButton">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#74a475" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#9decac" Offset="0" />
+												<GradientStop Color="#93e8a5" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter />
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+
+	<!-- Select device radio button -->
+	<Style x:Key="SelectDeviceButtonStyle" TargetType="Rectangle">
+		<Setter Property="Fill" Value="#f4f4f4" />
+		<Setter Property="Stroke" Value="#9c9c9c" />
+		<Setter Property="StrokeThickness" Value="2" />
+		<Setter Property="RadiusX" Value="3" />
+		<Setter Property="RadiusY" Value="3" />
+	</Style>
+
+	<Style x:Key="SelectDeviceButtonCheckedStyle" TargetType="Rectangle" BasedOn="{StaticResource SelectDeviceButtonStyle}">
+		<Setter Property="Fill" Value="#d2ffda" />
+		<Setter Property="Stroke" Value="#94e9a5" />
+	</Style>
+
+	<!-- Text on the Select device radio button -->
+	<Style x:Key="SelectDeviceTextUpStyle" TargetType="TextBlock">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="28" />
+		<Setter Property="Foreground" Value="#000000" />
+	</Style>
+
+	<Style x:Key="SelectDeviceTextDownStyle" TargetType="TextBlock" BasedOn="{StaticResource SelectDeviceTextUpStyle}">
+		<Setter Property="Foreground" Value="#8d8e90" />
+		<Setter Property="FontSize" Value="18" />
+		<Setter Property="TextWrapping" Value="Wrap" />
+	</Style>
+
+
+	<!-- Change order params radio button -->
+	<Style x:Key="OrderParamsButtonStyle" TargetType="Rectangle">
+		<Setter Property="Fill" Value="#f4f4f4" />
+		<Setter Property="Stroke" Value="#9c9c9c" />
+		<Setter Property="StrokeThickness" Value="2" />
+		<Setter Property="RadiusX" Value="3" />
+		<Setter Property="RadiusY" Value="3" />
+	</Style>
+
+	<Style x:Key="OrderParamsButtonCheckedStyle" TargetType="Rectangle" BasedOn="{StaticResource OrderParamsButtonStyle}">
+		<Setter Property="Fill" Value="#d2ffda" />
+		<Setter Property="Stroke" Value="#94e9a5" />
+	</Style>
+
+	<!-- Text on the Change order params radio button -->
+	<Style x:Key="OrderParamsTextUpStyle" TargetType="TextBlock">
+		<Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontSize" Value="28" />
+		<Setter Property="Foreground" Value="#000000" />
+	</Style>
+
+	<Style x:Key="OrderParamsTextDownStyle" TargetType="TextBlock" BasedOn="{StaticResource OrderParamsTextUpStyle}">
+		<Setter Property="Foreground" Value="#8d8e90" />
+		<Setter Property="FontSize" Value="18" />
+		<Setter Property="TextWrapping" Value="Wrap" />
+	</Style>
+
+	
+	<!-- Keyboard buttons -->
+	<Style x:Key="KeyboardButtonStyle" TargetType="Button">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="FontSize" Value="38"/>
+		<Setter Property="FontFamily" Value="Calibri Bold"/>
+		<Setter Property="Foreground" Value="#444648"/>
+		<Setter Property="Width" Value="70.5"/>
+		<Setter Property="Height" Value="70"/>
+		<Setter Property="Margin" Value="2.5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="5" RadiusY="5" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#dcdcdc" Offset="0" />
+												<GradientStop Color="#ffffff" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	
+	
+	<!-- Quit button -->
+	<Style x:Key="QuitButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+		<Setter Property="Width" Value="Auto" />
+		<Setter Property="Height" Value="70" />
+	</Style>
+	
+	<!-- Text on the Quit button -->
+	<Style x:Key="QuitButtonTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+		<Setter Property="FontSize" Value="38" />
+	</Style>
+	
+	
+	<!-- Change count button -->
+	<Style x:Key="ChangeCountButtonStyle" TargetType="Button">
+		<Setter Property="Width" Value="73"/>
+		<Setter Property="Height" Value="60"/>
+		<Setter Property="Margin" Value="5 4 5 0"/>
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+							<Rectangle.Fill>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Color="#ffffff" Offset="0" />
+										<GradientStop Color="#dcdcdc" Offset="1" />
+									</LinearGradientBrush.GradientStops>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<ContentPresenter/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="Button.IsPressed" Value="true">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="Button">
+							<Grid>
+								<Rectangle RadiusX="0" RadiusY="0" Stroke="#bbbbbb" StrokeThickness="1.2">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<LinearGradientBrush.GradientStops>
+												<GradientStop Color="#dcdcdc" Offset="0" />
+												<GradientStop Color="#ffffff" Offset="1" />
+											</LinearGradientBrush.GradientStops>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+
+	<!-- Title text -->
+    <Style x:Key="TitleTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="38" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="Fill" Value="#2c2c2c" />
+        <Setter Property="Stroke" Value="Transparent" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Offset" Value="0" />
+		<Setter Property="Margin" Value="15 0 0 0" />
+	</Style>
+
+    <!-- Hint settings -->
+    <!-- Hint container -->
+    <Style x:Key="HintContainerStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#ececec" />
+    </Style>
+
+    <!-- Hint rectangle -->
+    <Style x:Key="HintRectangleStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#b2b2b2" />
+	</Style>
+
+    <!-- Hint text -->
+    <Style x:Key="HintTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontFamily" Value="Calibri" />
+		<Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Fill" Value="#606060" />
+        <Setter Property="Opacity" Value="0.85" />
+        <Setter Property="Stroke" Value="Transparent" />
+    </Style>
+	
+
+    <!-- Multiline hint styles -->
+    <Style x:Key="MultilineHintRectangleStyle" TargetType="Rectangle">
+		<Setter Property="Fill" Value="#f4f4f4" />
+		<Setter Property="Stroke" Value="#9c9c9c" />
+		<Setter Property="StrokeThickness" Value="2" />
+		<Setter Property="RadiusX" Value="3" />
+		<Setter Property="RadiusY" Value="3" />
+	</Style>
+
+    <Style x:Key="MultilineHintTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="Foreground" Value="#8d8e90" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+
+    <!-- Load photos text -->
+    <Style x:Key="LoadPhotosTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#131313" />
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <!-- Ellipses animation colors -->
+    <Color x:Key="InactiveEllipseColor">#80a5d5</Color>
+    <Color x:Key="ActiveEllipseColor">#295391</Color>
+
+	
+    <!-- Message box styles -->
+    <!-- Message window -->
+    <Style x:Key="MessageWindowStyle" TargetType="Window" BasedOn="{StaticResource WindowStyle}">
+        <Setter Property="BorderBrush" Value="#787878" />
+        <Setter Property="BorderThickness" Value="1.2" />
+        <Setter Property="Background" Value="#fafafa" />
+    </Style>
+
+    <!-- Messege dialog text -->
+    <Style x:Key="MessageDialogTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="45" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+
+    <!-- Thumbnail list control styles -->
+    <!-- Thumbnail control background -->
+    <Style x:Key="ThumbnailControlBackgroundStyle" TargetType="Rectangle">
+        <Setter Property="Stroke" Value="#c1c1c1" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="RadiusX" Value="6" />
+        <Setter Property="RadiusY" Value="6" />
+        <Setter Property="Fill" Value="#ffffff" />
+		<Setter Property="BitmapEffect">
+			<Setter.Value>
+				<DropShadowBitmapEffect Color="Black" Direction="270" Opacity="1" ShadowDepth="2" />
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <!-- Thumbnail control information panel -->
+    <Style x:Key="ThumbnailControlInfoStyle" TargetType="Rectangle">
+        <Setter Property="Stroke" Value="#868686" />
+        <Setter Property="RadiusX" Value="5" />
+        <Setter Property="RadiusY" Value="5" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Fill">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#d2def1" Offset="0" />
+                        <GradientStop Color="#bbc7db" Offset="0.31" />
+                        <GradientStop Color="#b0bbcf" Offset="0.36" />
+                        <GradientStop Color="#838ea2" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+	
+
+    <!-- Photo information text style -->
+    <Style x:Key="PhotoInfoTextBigStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="Fill" Value="#474747" />
+        <Setter Property="Stroke" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="PhotoInfoTextSmallStyle" TargetType="TextBlock">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="#383838" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontFamily" Value="Tahoma" />
+    </Style>
+
+	
+    <!-- Thumbnail control navigation panel -->
+    <Style x:Key="ThumbnailControlNavigationStyle" TargetType="Rectangle">
+        <Setter Property="Stroke" Value="#868686" />
+        <Setter Property="RadiusX" Value="5" />
+        <Setter Property="RadiusY" Value="5" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Fill">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+						<GradientStop Color="#d2def1" Offset="0" />
+						<GradientStop Color="#bbc7db" Offset="0.31" />
+						<GradientStop Color="#b0bbcf" Offset="0.36" />
+						<GradientStop Color="#838ea2" Offset="1" />
+					</LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ThumbnailsItem text -->
+    <Style x:Key="ThumbnailItemTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="#444444" />
+    </Style>
+	
+
+    <!-- Gradient colors are used for check animation -->
+	<Color x:Key="UncheckedBorderColor">#9c9c9c</Color>
+    <Color x:Key="UncheckedBackgroundColor1">White</Color>
+    <Color x:Key="UncheckedBackgroundColor2">#e8e8e8</Color>
+    <Color x:Key="CheckedBorderColor">#398a3b</Color>
+    <Color x:Key="CheckedBackgroundColor1">#d9ffd9</Color>
+    <Color x:Key="CheckedBackgroundColor2">#d7e5d7</Color>
+
+	<DrawingBrush x:Key="ImageBackgroundBrush" Viewport="0,0,5,5" ViewportUnits="Absolute" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Geometry="M0,0 L1,0 1,1, 0,1Z">
+                    <GeometryDrawing.Brush>
+                        <SolidColorBrush Color="{StaticResource UncheckedBackgroundColor1}" />
+                    </GeometryDrawing.Brush>
+                </GeometryDrawing>
+                <GeometryDrawing Geometry="M0,0 L0.1,0 0,0.1Z">
+                    <GeometryDrawing.Brush>
+                        <SolidColorBrush Color="{StaticResource UncheckedBackgroundColor2}" />
+                    </GeometryDrawing.Brush>
+                </GeometryDrawing>
+                <GeometryDrawing Geometry="M0,1 L1,0 1,0.1 0.1,1Z">
+                    <GeometryDrawing.Brush>
+                        <SolidColorBrush Color="{StaticResource UncheckedBackgroundColor2}" />
+                    </GeometryDrawing.Brush>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    
+    <Style x:Key="LowQualityIndicatorBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="Red" />
+        <Setter Property="BorderBrush" Value="Red" />
+        <Setter Property="CornerRadius" Value="3" />
+    </Style>
+    
+    <Style x:Key="LowQualityIndicatorTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+	
+    <!-- Image editor styles  -->
+    <!-- Image Editor background-->
+	<Style x:Key="ImageEditorBackgroundStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#c1c1c1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="{StaticResource ImageBackgroundBrush}" />
+    </Style>
+
+    <Style x:Key="PhotoFrameArrowEnabledStyle" TargetType="Path">
+        <Setter Property="Stroke" Value="#79f494" />
+        <Setter Property="Fill" Value="#dbffe3" />
+    </Style>
+
+    <Style x:Key="PhotoFrameArrowDisabledStyle" TargetType="Path">
+        <Setter Property="Stroke" Value="#bdbdbd" />
+        <Setter Property="Fill" Value="#f5f5f5" />
+    </Style>
+	
+    <!-- Image Editor toolbox  -->
+    <Style x:Key="ImageEditorToolboxStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#848484" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#eeeeee" Offset="0" />
+                        <GradientStop Color="#e6e6e6" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Filename in ImageEditor -->
+    <Style x:Key="FileNameTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="Foreground" Value="#444444" />
+    </Style>
+
+
+    <!-- Rectangle rubberband control styles -->
+    <Style x:Key="RubberbandBorderStyle" TargetType="Border">
+        <Setter Property="BorderThickness" Value="9" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Opacity" Value="1.0" />
+        <Setter Property="BorderBrush" Value="Blue" />
+    </Style>
+
+    <Style x:Key="RubberbandEllipseStyle" TargetType="Ellipse">
+        <Setter Property="Fill" Value="LightGray" />
+        <Setter Property="Stroke" Value="Blue" />
+    </Style>
+
+    <Style x:Key="PointArrowStyle" TargetType="Polygon">
+        <Setter Property="Fill" Value="LightGray" />
+        <Setter Property="Stroke" Value="Blue" />
+    </Style>
+
+    <Style x:Key="RubberbandEllipseSelectedStyle" TargetType="Ellipse">
+        <Setter Property="Fill" Value="LightPink" />
+        <Setter Property="Stroke" Value="Blue" />
+    </Style>
+
+    <Style x:Key="PointArrowSelectedStyle" TargetType="Polygon">
+        <Setter Property="Fill" Value="LightPink" />
+        <Setter Property="Stroke" Value="Blue" />
+    </Style>
+
+	
+    <!-- ConfirmOrderScreen-->
+    <!-- Text in the order info table -->
+    <Style x:Key="OrderConfirmScreenTextStyle" TargetType="{x:Type pk:OrderInfoControl}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="40" />
+    </Style>
+
+    <!-- Total text in the order info table -->
+    <Style x:Key="OrderConfirmScreenTotalTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="Fill" Value="#2f2f2f" />
+        <Setter Property="Stroke" Value="Transparent" />
+    </Style>
+
+	
+    <!-- OrderFormingScreen right panel -->
+    <!-- Order information header (Entire Order label) -->
+    <Style x:Key="OrderInfoHeaderTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="33" />
+        <Setter Property="Fill" Value="#666666" />
+        <Setter Property="Stroke" Value="Transparent" />
+        <Setter Property="Offset" Value="-2" />
+    </Style>
+	
+	<!-- Text in the order info table -->
+    <Style x:Key="OrderFormingScreenTextStyle" TargetType="{x:Type pk:OrderInfoControl}" BasedOn="{StaticResource OrderConfirmScreenTextStyle}">
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <!-- Total text in the order info table -->
+    <Style x:Key="OrderFormingScreenTotalTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderConfirmScreenTotalTextStyle}">
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style x:Key="OrderParamsHeaderTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderInfoHeaderTextStyle}">
+        <Setter Property="FontFamily" Value="Calibri" />
+    </Style>
+
+    <Style x:Key="OrderParamsTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Fill" Value="#222222" />
+        <Setter Property="Stroke" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="OrderParamsValuesTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="#333333"/>
+    </Style>
+
+
+    <!-- ChoosePaperSizes screen -->
+    <!-- Text in the order info table -->
+    <Style x:Key="ChoosePaperSizesTextStyle" TargetType="{x:Type pk:OrderInfoControl}" BasedOn="{StaticResource OrderConfirmScreenTextStyle}">
+        <Setter Property="FontSize" Value="30" />
+    </Style>
+
+    <!-- Total text in the order info table -->
+    <Style x:Key="ChoosePaperSizesTotalTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderConfirmScreenTotalTextStyle}">
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="Fill" Value="#222222" />
+        <Setter Property="Stroke" Value="#222222" />
+    </Style>
+
+    <!-- Plus/Minus buttons text -->
+    <Style x:Key="PlusMinusButtonsTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderConfirmScreenTotalTextStyle}">
+        <Setter Property="FontFamily" Value="Verdana" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="Fill" Value="Green" />
+        <Setter Property="Stroke" Value="White" />
+    </Style>
+
+    <!-- Message text-->
+    <Style x:Key="ChoosePaperSizeMessageTextStyle" TargetType="TextBlock" BasedOn="{StaticResource MessageDialogTextStyle}">
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="Foreground" Value="#666666" />
+    </Style>
+
+
+    <!-- OrderInfoControl -->
+    <!-- Order information control background -->
+    <Style x:Key="OrderInfoBackgroundStyle" TargetType="Rectangle">
+        <Setter Property="RadiusX" Value="5" />
+        <Setter Property="RadiusY" Value="5" />
+        <Setter Property="Stroke" Value="#c1c1c1" />
+        <Setter Property="StrokeThickness" Value="1" />
+		<Setter Property="Fill" Value="#ffffff" />
+		<Setter Property="BitmapEffect">
+            <Setter.Value>
+                <DropShadowBitmapEffect Color="Black" Direction="270" Opacity="1" ShadowDepth="2" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Order information tabel header background -->
+    <Style x:Key="OrderInfoTabelHeaderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#868686" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#f3f3f3" Offset="0" />
+                        <GradientStop Color="#c2c2c2" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Order information table header text -->
+    <Style x:Key="OrderInfoTableHeaderTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="FontFamily" Value="Calibri" />
+    </Style>
+
+    <!-- Text of none empty items -->
+    <Style TargetType="TextBlock" x:Key="NonEmptyInfoItemStyle">
+        <Setter Property="Foreground" Value="#2f2f2f"/>
+    </Style>
+
+    <!-- Text of empty items -->
+    <Style TargetType="TextBlock" x:Key="EmptyInfoItemStyle">
+        <Setter Property="Foreground" Value="#7f7f7f"/>
+    </Style>
+
+    <!-- Separator line -->
+    <Style TargetType="Border" x:Key="LineSeparatorStyle">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#b7bac2" Offset="0"/>
+					<GradientStop Color="#a9acb6" Offset="0.75"/>
+					<GradientStop Color="#848484" Offset="0.76"/>
+					<GradientStop Color="#848484" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Height" Value="6"/>
+    </Style>
+
+    <!-- ContactInfoScreen -->
+    <!-- Keyboard background -->
+    <Style x:Key="KeyboardControlBackgroundStyle" TargetType="Border" BasedOn="{StaticResource ImageEditorBackgroundStyle}">
+        <Setter Property="Background" Value="White" />
+    </Style>
+
+    <!-- Textbox borders which display entered name and phone -->
+    <Style x:Key="TextBoxBorderStyle" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#e2e1e0" Offset="0" />
+                        <GradientStop Color="#fefdfd" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="#787878"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+
+    <!-- Textbox borders which display entered name and phone -->
+    <Style x:Key="FocusedTextBoxBorderStyle" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#e2e1e0" Offset="0" />
+                        <GradientStop Color="#fefdfd" Offset="1" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="#269927"/>
+        <Setter Property="BorderThickness" Value="3"/>
+    </Style>
+
+    <!-- Name and Phone caption text -->
+    <Style x:Key="KeyboardTextBoxStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Mangal" />
+        <Setter Property="FontSize" Value="30" />
+    </Style>
+    
+    <!-- Name and Phone caption text -->
+    <Style x:Key="KeyboardTextBoxCaptionStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Mangal" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <Setter Property="Foreground" Value="#a0a0a1" />
+        <Setter Property="FontSize" Value="27" />
+    </Style>
+
+    <!-- ThankYouScreen message text -->
+    <Style x:Key="OrderIdInfoTextStyle" TargetType="{x:Type pk:OutlinedText}">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="58" />
+        <Setter Property="Fill" Value="Black" />
+    </Style>
+
+    <!-- ThankYouCancelScreen message text -->
+    <Style x:Key="ThankYouScreenInfoTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderIdInfoTextStyle}">
+        <Setter Property="FontSize" Value="28" />
+    </Style>
+	
+<!-- SelectFoldersScreen -->    
+    <!--SelectedFolders label -->
+    <Style x:Key="FoldersLabelStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="Foreground" Value="#303030" />
+    </Style>
+    
+    <!-- FolderTree border -->
+    <Style x:Key="FolderTreeStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#c1c1c1" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="Background" Value="#ffffff" />		
+		<Setter Property="BitmapEffect">
+			<Setter.Value>
+				<DropShadowBitmapEffect Color="Black" Direction="270" Opacity="1" ShadowDepth="2" />
+			</Setter.Value>
+		</Setter>
+    </Style>
+    
+<!-- FolderItemControl styles -->
+    <!-- Alternation backgrounds-->
+    <Style x:Key="AltBackgroundBig1" TargetType="Border">
+        <Setter Property="Background" Value="#dbffe3" />
+    </Style>
+    <Style x:Key="AltBackgroundSmall1" TargetType="Border">
+        <Setter Property="Background" Value="#c2ffd0" />
+    </Style>
+
+    <Style x:Key="AltBackgroundBig2" TargetType="Border">
+        <Setter Property="Background" Value="#f5f5f5" />
+    </Style>
+    <Style x:Key="AltBackgroundSmall2" TargetType="Border">
+        <Setter Property="Background" Value="#e8e8e8" />
+    </Style>
+    
+    <!-- FolderItem labels -->
+    <Style x:Key="FolderNameStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="Foreground" Value="#303030" />
+    </Style>
+    
+    <!-- FolderItemDetails label-->
+    <Style x:Key="FolderDetailsStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Calibri" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="#296637" />
+    </Style>
+
+    <!-- FolderItem checkbox-->
+    <Style x:Key="FolderCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Width" Value="50" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid>
+                        <Grid>
+                            <Rectangle Name="Border" Width="50" Height="50" RadiusX="7" RadiusY="7" Stroke="#44bd60" StrokeThickness="3"></Rectangle>
+                            <Rectangle Name="Gradient" Width="42" Height="42" RadiusX="5" RadiusY="5" Stroke="#dcdcdc" StrokeThickness="3">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#dee1e5" Offset="0" />
+                                            <GradientStop Color="#f4f4f5" Offset="1" />
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Image Name="Image" Source="{DynamicResource {x:Static Core:Constants.ImageBigCheckBoxKey}}" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" />
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Gradient" Property="Stroke" Value="#edfff1" />
+                            <Setter TargetName="Gradient" Property="Fill" Value="#e5ffeb" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="Image" Storyboard.TargetProperty="Opacity" To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="Image" Storyboard.TargetProperty="Opacity" To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Expand/Collapse toggle button-->
+    <Style x:Key="ExpandCollapseToggleStyle" TargetType="ToggleButton">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0 0 10 0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Name="Border" Width="50" Height="50" CornerRadius="7" BorderBrush="#398a3b" BorderThickness="1.2">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <LinearGradientBrush.GradientStops>
+									<GradientStop Color="#97e497" Offset="0" />
+									<GradientStop Color="#71d871" Offset="1" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Path Name="Path" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1 1 1 1" Fill="Black" Data="M 0 14 L 0 21 L 14 21 L 14 35 L 21 35 L 21 21 L 35 21 L 35 14 L 21 14 L 21 0 L 14 0 L 14 14 Z"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Path" Property="Data" Value="M 0 0 L 0 7 L 35 7 L 35 0 Z" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <LinearGradientBrush.GradientStops>
+											<GradientStop Color="#71d871" Offset="0" />
+                                            <GradientStop Color="#97e497" Offset="1" />
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Scrollbar styles -->
+	<SolidColorBrush x:Key="ScrollbarBackgroundBrush" Color="#dcf2e2" />
+	
+    <LinearGradientBrush x:Key="NormalBrush" StartPoint="0,0" EndPoint="0,1">
+		<LinearGradientBrush.GradientStops>
+			<GradientStop Color="#97e497" Offset="0" />
+			<GradientStop Color="#71d871" Offset="1" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PressedBrush" StartPoint="0,0" EndPoint="0,1">
+		<LinearGradientBrush.GradientStops>
+			<GradientStop Color="#71d871" Offset="0" />
+            <GradientStop Color="#97e497" Offset="1" />
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="GlyphBrush" Color="#000" />
+
+    <Style x:Key="DotStyle" TargetType="Ellipse">
+        <Setter Property="Width" Value="3" />
+        <Setter Property="Height" Value="3" />
+        <Setter Property="Fill" Value="#296637" />
+    </Style>	
+	
+	<!-- Burning screen-->
+    <!-- Burning instructions text-->
+    <Style x:Key="BurningScreenInstructionsTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderIdInfoTextStyle}">
+        <Setter Property="FontSize" Value="28" />
+    </Style>
+    
+    <!-- Burn button -->
+    <!-- Start button -->
+    <Style x:Key="BurnButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButton1Style}">
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="Height" Value="70" />
+    </Style>
+
+    <!-- Text on the Burn button -->
+    <Style x:Key="ButtonBurnTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource ButtonTextStyle}">
+        <Setter Property="FontSize" Value="38" />
+    </Style>
+	
+<!-- Printing screen-->
+    <Style x:Key="PrintingScreenMessageTextStyle" TargetType="{x:Type pk:OutlinedText}" BasedOn="{StaticResource OrderIdInfoTextStyle}">
+        <Setter Property="FontSize" Value="28" />
+    </Style>	
+    
+</ResourceDictionary>

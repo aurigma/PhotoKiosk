@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<crops>
+    <crop>
+      <name>10x15</name>
+      <width>150</width>
+      <height>100</height>
+    </crop>
+    <crop>
+      <name>15x20</name>
+      <width>200</width>
+      <height>150</height>
+    </crop>
+    <crop>
+      <name>10x30</name>
+      <width>300</width>
+      <height>100</height>
+    </crop>
+    <crop>
+      <name>Free</name>
+      <width>0</width>
+      <height>0</height>
+    </crop>
+</crops>

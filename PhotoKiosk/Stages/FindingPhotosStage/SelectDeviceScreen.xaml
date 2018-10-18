@@ -1,0 +1,76 @@
+﻿<Page x:Class="Aurigma.PhotoKiosk.SelectDeviceScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+      xmlns:Core="clr-namespace:Aurigma.PhotoKiosk.Core;assembly=Aurigma.PhotoKiosk.Core"
+      Title="ChooseUploadWayScreen">
+    <DockPanel LastChildFill="True">
+
+        <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+
+            <!-- Next button -->
+            <Button Style="{StaticResource NextButtonStyle}"
+                DockPanel.Dock="Right"
+                Click="ButtonNextClickHandler"
+                VerticalAlignment="Center">
+                <pk:OutlinedText Style="{StaticResource NextButtonTextStyle}"
+								TextContent="{DynamicResource {x:Static Core:Constants.NextButtonTextKey}}"
+								Margin ="40 0 40 0"
+								VerticalAlignment="Center" />
+            </Button>
+
+            <!-- Title -->
+            <pk:OutlinedText Style="{StaticResource TitleTextStyle}"
+                         TextContent="{DynamicResource {x:Static Core:Constants.SelectDeviceTextKey}}"
+                         DockPanel.Dock = "Left"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center" />
+        </DockPanel>
+
+        <!-- Hint -->
+        <Grid DockPanel.Dock="Top" Margin="0 7 0 15" Width="Auto">
+            <Rectangle Style="{StaticResource HintContainerStyle}" />
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Style="{StaticResource HintRectangleStyle}" Height="32" Width="9" VerticalAlignment="Center" />
+                <pk:OutlinedText Style="{StaticResource HintTextStyle}" TextContent="{DynamicResource {x:Static Core:Constants.SelectDeviceNoticeTextKey}}" Margin="10 0 0 0" VerticalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <RadioButton Style="{StaticResource SelectDeviceRadioButtonStyle}"
+                         Grid.Column="0" Grid.Row="0"
+                         IsChecked="True"
+                         x:Name="_storageDeviceButton">
+                <DockPanel>
+                    <Image DockPanel.Dock="Left" Source="{DynamicResource {x:Static Core:Constants.ImageStorageKey}}" Width="189" Height="188" Margin="0, 10, 30, 10" />
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource SelectDeviceTextUpStyle}" Text="{DynamicResource {x:Static Core:Constants.MediaStorageTitleTextKey}}" />
+                    <TextBlock DockPanel.Dock="Bottom" Style="{StaticResource SelectDeviceTextDownStyle}"
+                               Text="{DynamicResource {x:Static Core:Constants.MediaStorageDescriptionTextKey}}"
+                               VerticalAlignment="Center" Margin="0 5 0 5" />
+                </DockPanel>
+            </RadioButton>
+
+            <RadioButton Style="{StaticResource SelectDeviceRadioButtonStyle}"
+                         Grid.Column="0" Grid.Row="2"
+                         IsChecked="False"
+                         x:Name="_bluetoothButton">
+                <DockPanel>
+                    <Image DockPanel.Dock="Left" Source="{DynamicResource {x:Static Core:Constants.ImageBluetoothKey}}"  Width="189" Height="188" Margin="0, 10, 30, 10" />
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource SelectDeviceTextUpStyle}" Text="{DynamicResource {x:Static Core:Constants.BluetoothTitleTextKey}}" />
+                    <TextBlock DockPanel.Dock="Bottom" Style="{StaticResource SelectDeviceTextDownStyle}"
+                               Text="{DynamicResource {x:Static Core:Constants.BluetoothDescriptionTextKey}}"
+                               VerticalAlignment="Center" Margin="0 5 0 5" />
+                </DockPanel>
+            </RadioButton>
+        </Grid>
+    </DockPanel>
+</Page>

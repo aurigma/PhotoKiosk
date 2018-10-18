@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!--definitions-->
+	<xs:simpleType name="imageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jpeg" />
+			<xs:enumeration value="tiff" />
+			<xs:enumeration value="png" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="overwriteModeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="rename" />
+			<xs:enumeration value="replace" />
+			<xs:enumeration value="skip" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="param">
+		<xs:complexType>
+			<xs:attribute name="key" type="xs:string" use="required" />
+			<xs:attribute name="pattern" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="path">
+		<xs:complexType>
+			<xs:attribute name="pattern" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="temp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element ref="copy" maxOccurs="unbounded" />
+					<xs:element ref="convert" maxOccurs="unbounded" minOccurs="0" />
+					<xs:element ref="xslt" maxOccurs="unbounded" minOccurs="0" />
+					<xs:element ref="watermark" maxOccurs="unbounded" minOccurs="0" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="dpof">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="crop" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="watermark" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="targetDirectory" type="xs:string" use="required" />
+			<xs:attribute name="channelDirectoryName" type="xs:string" use="required" />
+			<xs:attribute name="copyCountKey" type="xs:string" use="required" />
+			<xs:attribute name="paperSizeKey" type="xs:string" use="required" />
+			<xs:attribute name="printChannelKey" type="xs:string" use="required" />
+			<xs:attribute name="transliteratePath" type="xs:boolean" use="optional" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="copy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="crop" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="dpof" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="temp" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="convert" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="xslt" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="watermark" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="target" type="xs:string" use="required" />
+			<xs:attribute name="overwriteMode" type="overwriteModeType" use="optional" />
+			<xs:attribute name="transliteratePath" type="xs:boolean" use="optional" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="convert">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="temp" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="watermark" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="to" type="imageType" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="crop">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="temp" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+				<xs:element ref="watermark" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="xKey" type="xs:string" use="required" />
+			<xs:attribute name="yKey" type="xs:string" use="required" />
+			<xs:attribute name="widthKey" type="xs:string" use="required" />
+			<xs:attribute name="heightKey" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="xslt">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="filePathKey" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="watermark">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="textKey" type="xs:string" use="required" />
+			<xs:attribute name="textPositionKey" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="tasks">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element ref="copy" maxOccurs="unbounded" minOccurs="0" />
+					<xs:element ref="temp" maxOccurs="unbounded" minOccurs="0" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="constraints">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="param" maxOccurs="unbounded" minOccurs="0" />
+				<xs:choice>
+					<xs:sequence maxOccurs="1" minOccurs="0">
+						<xs:element ref="path" />
+						<xs:element ref="param" maxOccurs="unbounded" minOccurs="0" />
+					</xs:sequence>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="file">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="constraints" maxOccurs="1" minOccurs="0" />
+				<xs:choice>
+					<xs:sequence maxOccurs="1">
+						<xs:element ref="tasks" maxOccurs="1" minOccurs="1" />
+						<xs:element ref="constraints" maxOccurs="1" minOccurs="0" />
+					</xs:sequence>
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="title" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="rule">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="files" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="file" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="docs" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="file"  maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="title" type="xs:string" use="required" />
+			<xs:attribute name="createRandomSubfolderInOutput" type="xs:boolean" use="optional" />
+			<xs:attribute name="zip" type="xs:boolean" use="optional" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

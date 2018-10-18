@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<price>
+  <settings>
+    <setting key="SalesTaxPercent" value="0" />
+    <setting key="SalesTaxComment" value="" />
+    <setting key="MinimumCost" value="0" />
+  </settings>
+  <formats>
+    <format name="10x15" width="150" height="100" dpi="300" />
+	<format name="15x20" width="200" height="150" dpi="300" />
+  </formats>
+  <types>
+    <type name="Glossy" description="Glossy surface provides bright saturated colors but it's subject to fingerprints." />
+    <type name="Matt" description="Fingerprints are not easily left on paper. Colors are not so saturated as with glossy paper." />
+  </types>
+  <products>
+    <product format="10x15" type="Glossy" price="1">
+      <discounts>
+        <discount start="1" price="1" />
+      </discounts>
+    </product>
+    <product format="10x15" type="Matt" price="2">
+      <discounts>
+        <discount start="1" price="2" />
+      </discounts>
+    </product>
+    <product format="15x20" type="Glossy" price="3">
+      <discounts>
+        <discount start="1" price="3" />
+      </discounts>
+    </product>
+    <product format="15x20" type="Matt" price="4">
+      <discounts>
+        <discount start="1" price="4" />
+      </discounts>
+    </product>
+  </products>
+  <services>
+    <service name="Handling charges" description="" price="1" fixed="True" permanent="True" />
+  </services>
+</price>

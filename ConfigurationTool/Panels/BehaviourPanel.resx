@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="_folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>156, 17</value>
+  </metadata>
+  <metadata name="_openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_folderSelectionCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_folderSelectionCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_folderSelectionCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 107</value>
+  </data>
+  <data name="_folderSelectionCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="_folderSelectionCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="_folderSelectionCheckbox.Text" xml:space="preserve">
+    <value>Enable folder selection</value>
+  </data>
+  <data name="&gt;&gt;_folderSelectionCheckbox.Name" xml:space="preserve">
+    <value>_folderSelectionCheckbox</value>
+  </data>
+  <data name="&gt;&gt;_folderSelectionCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_folderSelectionCheckbox.Parent" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_folderSelectionCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 56</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>437, 39</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_sourcePathsNoteLabel.Text" xml:space="preserve">
+    <value>Note: Both folders and drives (CD, DVD, card readers) are supported. Several paths can be
+specified separated by semi-colons (;). If this setting is not initialized Photo Kiosk will search
+photos on all CD/DVD drives and removable media.</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsNoteLabel.Name" xml:space="preserve">
+    <value>_sourcePathsNoteLabel</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsNoteLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsNoteLabel.Parent" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsNoteLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_sourcePathsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_sourcePathsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 30</value>
+  </data>
+  <data name="_sourcePathsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="_sourcePathsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_sourcePathsButton.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsButton.Name" xml:space="preserve">
+    <value>_sourcePathsButton</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsButton.Parent" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_sourcePathsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 32</value>
+  </data>
+  <data name="_sourcePathsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 20</value>
+  </data>
+  <data name="_sourcePathsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsBox.Name" xml:space="preserve">
+    <value>_sourcePathsBox</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsBox.Parent" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_sourcePathsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_sourcePathsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_sourcePathsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 16</value>
+  </data>
+  <data name="_sourcePathsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 13</value>
+  </data>
+  <data name="_sourcePathsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_sourcePathsLabel.Text" xml:space="preserve">
+    <value>Paths where Photo Kiosk searches photos:</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsLabel.Name" xml:space="preserve">
+    <value>_sourcePathsLabel</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsLabel.Parent" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_sourcePathsLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_pathsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 200</value>
+  </data>
+  <data name="_pathsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 132</value>
+  </data>
+  <data name="_pathsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_pathsBox.Text" xml:space="preserve">
+    <value>Paths</value>
+  </data>
+  <data name="&gt;&gt;_pathsBox.Name" xml:space="preserve">
+    <value>_pathsBox</value>
+  </data>
+  <data name="&gt;&gt;_pathsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_pathsBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_pathsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_unitsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 141</value>
+  </data>
+  <data name="_unitsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 21</value>
+  </data>
+  <data name="_unitsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;_unitsBox.Name" xml:space="preserve">
+    <value>_unitsBox</value>
+  </data>
+  <data name="&gt;&gt;_unitsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_unitsBox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_unitsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_unitsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_unitsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_unitsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 144</value>
+  </data>
+  <data name="_unitsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="_unitsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="_unitsLabel.Text" xml:space="preserve">
+    <value>Paper size units:</value>
+  </data>
+  <data name="&gt;&gt;_unitsLabel.Name" xml:space="preserve">
+    <value>_unitsLabel</value>
+  </data>
+  <data name="&gt;&gt;_unitsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_unitsLabel.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_unitsLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_timeoutBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 114</value>
+  </data>
+  <data name="_timeoutBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="_timeoutBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="_timeoutBox.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_timeoutBox.Name" xml:space="preserve">
+    <value>_timeoutBox</value>
+  </data>
+  <data name="&gt;&gt;_timeoutBox.Type" xml:space="preserve">
+    <value>Aurigma.PhotoKiosk.ConfigurationTool.NumericTextBox, ConfigurationTool, Version=7.0.1.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012</value>
+  </data>
+  <data name="&gt;&gt;_timeoutBox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_timeoutBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_timeoutLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_timeoutLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_timeoutLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 117</value>
+  </data>
+  <data name="_timeoutLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="_timeoutLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="_timeoutLabel.Text" xml:space="preserve">
+    <value>Timeout (milliseconds):</value>
+  </data>
+  <data name="&gt;&gt;_timeoutLabel.Name" xml:space="preserve">
+    <value>_timeoutLabel</value>
+  </data>
+  <data name="&gt;&gt;_timeoutLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_timeoutLabel.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_timeoutLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_eventLoggingCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_eventLoggingCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_eventLoggingCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 168</value>
+  </data>
+  <data name="_eventLoggingCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 17</value>
+  </data>
+  <data name="_eventLoggingCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_eventLoggingCheckbox.Text" xml:space="preserve">
+    <value>Enable event logging</value>
+  </data>
+  <data name="&gt;&gt;_eventLoggingCheckbox.Name" xml:space="preserve">
+    <value>_eventLoggingCheckbox</value>
+  </data>
+  <data name="&gt;&gt;_eventLoggingCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_eventLoggingCheckbox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_eventLoggingCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_searchTimeoutBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 88</value>
+  </data>
+  <data name="_searchTimeoutBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="_searchTimeoutBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="_searchTimeoutBox.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutBox.Name" xml:space="preserve">
+    <value>_searchTimeoutBox</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutBox.Type" xml:space="preserve">
+    <value>Aurigma.PhotoKiosk.ConfigurationTool.NumericTextBox, ConfigurationTool, Version=7.0.1.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutBox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="_searchTimeoutLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_searchTimeoutLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_searchTimeoutLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 91</value>
+  </data>
+  <data name="_searchTimeoutLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 13</value>
+  </data>
+  <data name="_searchTimeoutLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="_searchTimeoutLabel.Text" xml:space="preserve">
+    <value>Search duration (milliseconds):</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutLabel.Name" xml:space="preserve">
+    <value>_searchTimeoutLabel</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutLabel.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_searchTimeoutLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="_cacheSizeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 62</value>
+  </data>
+  <data name="_cacheSizeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="_cacheSizeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_cacheSizeBox.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeBox.Name" xml:space="preserve">
+    <value>_cacheSizeBox</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeBox.Type" xml:space="preserve">
+    <value>Aurigma.PhotoKiosk.ConfigurationTool.NumericTextBox, ConfigurationTool, Version=7.0.1.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeBox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="_cacheSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_cacheSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_cacheSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 65</value>
+  </data>
+  <data name="_cacheSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 13</value>
+  </data>
+  <data name="_cacheSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="_cacheSizeLabel.Text" xml:space="preserve">
+    <value>Memory cache size (megabytes):</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeLabel.Name" xml:space="preserve">
+    <value>_cacheSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeLabel.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_cacheSizeLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="_photoKioskIdBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 36</value>
+  </data>
+  <data name="_photoKioskIdBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 20</value>
+  </data>
+  <data name="_photoKioskIdBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdBox.Name" xml:space="preserve">
+    <value>_photoKioskIdBox</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdBox.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="_photoKioskIdLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_photoKioskIdLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_photoKioskIdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 20</value>
+  </data>
+  <data name="_photoKioskIdLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="_photoKioskIdLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_photoKioskIdLabel.Text" xml:space="preserve">
+    <value>Photo Kiosk ID:</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdLabel.Name" xml:space="preserve">
+    <value>_photoKioskIdLabel</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdLabel.Parent" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_photoKioskIdLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="_settingsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="_settingsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 191</value>
+  </data>
+  <data name="_settingsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_settingsBox.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;_settingsBox.Name" xml:space="preserve">
+    <value>_settingsBox</value>
+  </data>
+  <data name="&gt;&gt;_settingsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_settingsBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_settingsBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;_folderBrowserDialog.Name" xml:space="preserve">
+    <value>_folderBrowserDialog</value>
+  </data>
+  <data name="&gt;&gt;_folderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_openFileDialog.Name" xml:space="preserve">
+    <value>_openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;_openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>BehaviourPanel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Aurigma.PhotoKiosk.ConfigurationTool.BasePanel, ConfigurationTool, Version=7.0.1.0, Culture=neutral, PublicKeyToken=f4bbbf243f314012</value>
+  </data>
+</root>

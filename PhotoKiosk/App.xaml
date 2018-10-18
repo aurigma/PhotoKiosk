@@ -1,0 +1,7 @@
+﻿<Application x:Class="Aurigma.PhotoKiosk.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:pk="clr-namespace:Aurigma.PhotoKiosk"
+             StartupUri="MainWindow.xaml"
+             Startup="App_Startup">
+</Application>
